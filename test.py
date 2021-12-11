@@ -82,3 +82,4 @@ a={"name":x,
    "age":y,
    "sex":z}
 print(a)
+
