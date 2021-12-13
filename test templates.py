@@ -89,15 +89,49 @@
 """练习一：模拟一个红绿灯的功能，红灯30次，绿灯35次，黄灯5次，如此循坏
  练习二：使用代码实现注册的功能：用户输入账号和密码，
  要求账号长度为5-8位，密码6-12位，并且账号必须小写字母开头，并且存储到字典{username:password}中"""
-for i in range(30):
-    print("红")
-for i in range(35):
-    print("绿")
-for i in range(5):
-    print("黄")
+# while 1<2:
+#     for i in range(30):
+#         print("红")
+#     for i in range(35):
+#         print("绿")
+#     for i in range(5):
+#         print("黄")
+# 练习二
+# userinfo={}
+# username=input("请输入5-8位的账号名：")
+# if len(username)>=5 and len(username)<=8:
+#     if username[0] in "qwertyuioplkjhgfdsazxcvbnm":
+#         password = input("请输入6-12位的密码：")
+#         if len(password) >= 6 and len(password) <= 12:
+#             userinfo[username] = password
+#         else:
+#             print("请输入正确的密码格式")
+#     else:
+#         print("账号的首字母必须为小写！")
+# else:
+#         print("请输入正确的账号名")
+# print(userinfo)
 
-userinfo={}
-username=input("请输入5-8位的账号名：")
-if len(username)>=5 and len(username)<=8:
+# # 红绿灯题目的优化答案：用字典提高代码可维护性
+# light={"红灯":30,"绿灯":35,"黄灯":5}
+# for i in light:
+#     for j in range(light[i]):
+#         print (i,"倒计时还有",light[i]-j,"秒")
 
-input("请输入6-12位的密码：")
+# continue和break
+# for i in range(10):
+#    if i==4:
+#        continue
+#    print(i)
+#
+# for i in range(10):
+#    if i==4:
+#        break
+#    print(i)
+"""对于嵌套循环，break只会跳过一层循环"""
+for i in range(1,10):
+    for j in range(1,i+1):
+        if i==5:
+            break
+        print(i,"*",j,"=",i*j,end="  ")
+    print()
